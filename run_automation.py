@@ -5,7 +5,7 @@ import re
 import subprocess
 import sys
 
-from embeddedlab.config import OUTPUT_DIR, SAMPLE_TELEMETRY
+from embeddedlab.config import OUTPUT_DIR, SAMPLE_VEHICLE_TELEMETRY
 from embeddedlab.device import ConnectedDevice, DeviceConfig
 from embeddedlab.reporting import write_test_report
 from embeddedlab.telemetry import dedupe_events, load_telemetry, summarize_states
@@ -27,7 +27,7 @@ def run_pytest() -> tuple[int, int]:
 
 
 def main() -> None:
-    rows = load_telemetry(SAMPLE_TELEMETRY)
+    rows = load_telemetry(SAMPLE_VEHICLE_TELEMETRY)
     cleaned, clean_meta = dedupe_events(rows)
 
     device = ConnectedDevice(DeviceConfig.from_dict({"device_id": "vc-001"}))

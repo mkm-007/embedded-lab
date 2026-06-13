@@ -2,18 +2,27 @@
 
 IoT / connected-device lab with **modules** — add slices, don't replace.
 
-| Module | Command | JD fit |
-|--------|---------|--------|
-| Device validation | `python run_automation.py` | Connectivity, config, state transitions |
-| Telemetry ingest | sample CSV in `data/samples/` | Vehicle/platform telemetry |
-| Automation reporting | `outputs/automation/test_report.json` | Test dashboards, CI-style summaries |
+| Module | Command | Dataset | JD fit |
+|--------|---------|---------|--------|
+| **Energy device** | `python run_device.py` | `residential_energy_telemetry.csv` (`pw-*`) | Tesla Residential Energy Device Software |
+| **Test automation** | `python run_automation.py` | `vehicle_connectivity_telemetry.csv` (`vc-*`) | Rivian Connected Systems, pytest/CI demos |
+| Shared core | `embeddedlab/device.py` | — | Config validation, state machine |
 
 ```bash
 cd labs/embedded-lab
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
+
+# Tesla / energy IoT interview
+python run_device.py
+pytest tests/test_energy.py -q    # 5 passing
+
+# Rivian / automation interview
 python run_automation.py
-pytest -q
+pytest tests/test_automation.py -q    # 6 passing
+
+# Full suite
+pytest -q    # 11 passing
 ```
 
-**Interview:** same repo — demo automation module for test/connected-systems roles; device module for energy/IoT roles.
+**Interview:** same repo — pick the module that matches the resume you submitted.

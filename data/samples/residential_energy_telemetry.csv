@@ -1,0 +1,12 @@
+ts,device_id,soc_pct,grid_w,battery_w,state
+1001,pw-001,85,1200,-500,discharging
+1002,pw-001,84,800,-300,discharging
+1003,pw-002,92,0,1500,charging
+1004,pw-002,93,0,1200,charging
+1005,pw-003,55,2000,0,grid_connected
+1006,pw-003,55,1800,0,grid_connected
+1007,pw-001,83,500,-200,discharging
+1008,pw-004,70,0,0,idle
+1009,pw-005,60,900,-100,discharging
+1010,pw-001,82,600,-250,discharging
+1010,pw-001,82,600,-250,discharging

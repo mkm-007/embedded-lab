@@ -32,7 +32,7 @@ class DeviceConfig:
 
 
 @dataclass
-class ConnectedDevice:
+class ResidentialDevice:
     config: DeviceConfig
     state: str = "idle"
     soc_pct: float = 50.0
@@ -61,3 +61,7 @@ class ConnectedDevice:
             "soc_pct": self.soc_pct,
             "commands_applied": len(self.command_log),
         }
+
+
+# Shared alias — automation / connected-systems demos use the same state model
+ConnectedDevice = ResidentialDevice
