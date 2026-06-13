@@ -1,0 +1,7 @@
+device_id,protocol,clock_khz,pin_map,component
+imu-01,i2c,100,SDA:A4|SCL:A5,MPU6050
+gps-01,uart,115,TX:D1|RX:D0,NEO-6M
+flash-01,spi,8000,MOSI:D11|MISO:D12|SCK:D13,Winbond
+temp-01,i2c,100,SDA:A4|SCL:A5,LM75
+motor-01,uart,9600,TX:1|RX:0,ESC-Controller
+imu-01,i2c,100,SDA:A4|SCL:A5,MPU6050
