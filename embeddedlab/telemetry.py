@@ -25,9 +25,9 @@ def dedupe_events(rows: list[dict], key: str = "ts") -> tuple[list[dict], dict]:
     }
 
 
-def summarize_states(rows: list[dict]) -> dict:
+def summarize_states(rows: list[dict], key: str = "state") -> dict:
     counts: dict[str, int] = {}
     for row in rows:
-        state = row["state"]
+        state = row[key]
         counts[state] = counts.get(state, 0) + 1
     return counts

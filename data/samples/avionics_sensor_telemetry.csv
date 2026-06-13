@@ -1,0 +1,12 @@
+ts,sensor_id,altitude_ft,airspeed_kts,imu_pitch_deg,imu_roll_deg,flight_phase
+1001,imu-001,1200,145,2.1,-0.8,climb
+1002,imu-001,1450,152,3.4,-1.1,climb
+1003,gps-001,1450,152,3.4,-1.1,climb
+1004,imu-001,3200,180,1.2,0.4,cruise
+1005,imu-001,3250,182,0.9,0.2,cruise
+1006,baro-001,3250,182,0.9,0.2,cruise
+1007,imu-001,3280,181,1.0,0.3,cruise
+1008,imu-001,800,95,-4.5,2.0,approach
+1009,imu-001,200,62,-8.2,3.1,approach
+1010,imu-001,0,0,0.0,0.0,ground
+1010,imu-001,0,0,0.0,0.0,ground
